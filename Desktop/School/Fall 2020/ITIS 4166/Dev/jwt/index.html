@@ -55,7 +55,7 @@
     }
 
     function getDashboard() {
-        history.pushState({ page: 1 }, "", "Dashboard");
+        history.pushState({ page: 1 }, "Dashboard", "Dashboard");
         const token = localStorage.getItem('jwt');
         axios.get('/api/dashboard', {
             headers: {
@@ -72,7 +72,7 @@
     }
 
     function getSettings() {
-        history.pushState({ page: 2 }, "", "Settings");
+        history.pushState({ page: 2 }, "Settings", "Settings");
         const token = localStorage.getItem('jwt');
         axios.get('/api/settings', {
             headers: {
